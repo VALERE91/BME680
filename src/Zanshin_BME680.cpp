@@ -123,7 +123,6 @@ bool BME680_Class::begin(const uint32_t i2cSpeed, const uint8_t i2cAddress) {
   @param[in] i2cAddress I2C Address, use 0 to self-determine
   return "true" if successful otherwise false
   */
-  Wire.begin();             // Start I2C as master
   Wire.setClock(i2cSpeed);  // and set bus speed
   _I2CSpeed = i2cSpeed;
   for (_I2CAddress = BME680_I2C_MIN_ADDRESS; _I2CAddress <= BME680_I2C_MAX_ADDRESS;
